@@ -1,0 +1,345 @@
+/* Estilo Global */
+body {
+    font-family: "Roboto Mono", monospace;
+    background-color: #0f021b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px;
+}
+
+
+/* Estilo para a Seção de Cabeçalho */
+.password-header {
+    color: #FFF;
+    text-align: center;
+    line-height: 28px;
+}
+
+/* Estilo para o Contêiner de Senha */
+.password-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #2C1746;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border-bottom: #FD58FF solid 2px;
+}
+
+.password-container h2,
+p {
+    color: #FFF;
+}
+
+.password-container img {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.input-password {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-password p {
+    color: #8A87AA;
+}
+
+input#password {
+    background: transparent;
+    border-color: transparent;
+    font-size: 40px;
+    color: #FFF;
+    line-height: 52.75px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+input#password:focus-visible {
+    outline: none !important;
+}
+
+
+/* Estilo para a Seção de Personalização de Senha */
+.container {
+    background-color: #180828;
+    padding: 20px;
+    border: #694A81 solid 1px;
+    width: 100%;
+    max-width: 1000px;
+    text-align: left;
+    height: 100%;
+    margin: 10px 0px 40px;
+}
+
+#title {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    background-color: #180828;
+    color: #D7D5EB;
+    margin: 10px 10px 40px;
+}
+
+.options {
+    display: flex;
+    flex-direction: row;
+    color: #FFF;
+    justify-content: space-evenly;
+}
+
+.options-characteres,
+.length-password,
+.strength {
+    display: flex;
+    flex-direction: column;
+}
+
+.length-password label,
+.options-characteres span,
+.strength span {
+    font-size: 24px;
+    font-weight: 500;
+    color: #8A87AA;
+    margin-bottom: 30px;
+}
+
+.length-password,
+.options-characteres,
+.strength label {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23.4px;
+    color: #8A87AA;
+    gap: 16px;
+}
+
+span#length-value {
+    background-color: #2C1746;
+    border: solid 1px #694A81;
+    width: 100%;
+    max-width: 39px;
+    height: 30px;
+    max-height: 55px;
+    display: block;
+    padding: 10px;
+}
+
+.password-security {
+    display: flex;
+    flex-direction: row;
+    color: #8A87AA;
+    line-height: 23.44px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.strength-indicator {
+    width: 100%;
+    max-width: 300px;
+    height: 32px;
+    background-color: #2C1746;
+    margin: 10px 0 0 0;
+    overflow: hidden;
+}
+
+#strength-bar {
+    height: 100%;
+    width: 0;
+    background-color: red;
+    transition: width 0.3s;
+}
+
+/* Estilo do controle deslizante de número de caracteres */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+    height: 6px;
+    border-radius: 5px;
+    outline: none;
+    background: linear-gradient(to right, #fff 0%, #2C1746 0%);
+    transition: background 0.3s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #FFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+/* Estilização do checkbox  */
+.styled-checkbox {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    color: #8A87AA;
+    cursor: pointer;
+    margin: 5px 0;
+}
+
+.styled-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.styled-checkbox .checkmark {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #2C1746;
+    border: 1px solid #694A81;
+    border-radius: 3px;
+    margin: 0px 8px 0px 0px;
+    position: relative;
+}
+
+.styled-checkbox input[type="checkbox"]:checked+.checkmark {
+    background-color: #FFFFFF;
+}
+
+.styled-checkbox input[type="checkbox"]:checked+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 7px;
+    height: 13px;
+    border: solid #0F021B;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.styled-checkbox span {
+    color: #FFFFFF;
+}
+
+
+/* Botões */
+
+#copyBottom {
+    font-family: 'Roboto Mono';
+    font-weight: 500;
+    background-color: #FD58FF;
+    color: #0F021B;
+    font-size: 22px;
+    line-height: 25px;
+    border-radius: 2px;
+    border: none;
+    padding: 10px 12px 10px 12px;
+    cursor: pointer;
+}
+
+/* Media Queries para Responsividade */
+
+/* Estilos para telas menores que 768px (tamanho de tablets e celulares) */
+@media (max-width: 1024px) {
+    body {
+        margin: 20px;
+    }
+
+    .container {
+        padding: 10px;
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .password-header {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .password-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .input-password {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .password-container img {
+        padding: 5px;
+    }
+
+    input#password {
+        font-size: 24px;
+        line-height: 32px;
+        padding-left: 10px;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .options-characteres,
+    .length-password,
+    .strength {
+        margin-bottom: 50px;
+    }
+
+    .strength-indicator {
+        max-width: 100%;
+        height: 24px;
+    }
+
+    #copyBottom {
+        font-size: 18px;
+        padding: 8px 10px;
+    }
+}
+
+/* Estilos para telas menores que 480px (tamanho de celulares menores) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .password-header p {
+        font-size: 14px;
+    }
+
+    input#password {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .options {
+        padding: 0 10px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    #copyBottom {
+        font-size: 16px;
+        padding: 6px 8px;
+    }
+}

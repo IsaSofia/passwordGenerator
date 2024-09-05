@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- Importação de Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="password-header">
+        <img src="./assets/img/unlock.png">
+        <h1>Gerador de Senhas</h1>
+        <p>Gere instantaneamente uma senha aleatória e segura</p>
+    </div>
+    <div class="password-container">
+        <div class="input-password">
+            <p>senha</p>
+            <input type="text" id="password" readonly oninput="toggleCopyButton()"></input>
+        </div>
+        <div>
+            <img src="./assets/img/copy.png" id="copyleft" onclick="copyPassword()">
+            <img src="./assets/img/refresh-cw.png" id="generate" onclick="generatePassword()">
+        </div>
+    </div>
+
+    <div class="container">
+        <span id="title">Personalize sua senha</span>
+        <div class="options">
+            <div class="length-password">
+                <label for="length">Número de caracteres</label>
+                <input type="range" id="length" min="12" max="32" value="12" oninput="updateSliderBackground(this)">
+                <span id="length-value" readonly="">12</span>
+            </div>
+            <div class="options-characteres">
+                <span>Características da senha</span>
+                <label class="styled-checkbox">
+                    <input type="checkbox" id="lowercase" checked></input>
+                    <span class="checkmark"></span>
+                    Letras maiúsculas
+                </label>
+                <label class="styled-checkbox">
+                    <input type="checkbox" id="uppercase"></input>
+                    <span class="checkmark"></span>
+                    Letras maiúsculas
+                </label>
+                <label class="styled-checkbox">
+                    <input type="checkbox" id="numbers"></input>
+                    <span class="checkmark"></span>
+                    Números
+                </label>
+                <label class="styled-checkbox">
+                    <input type="checkbox" id="symbols"></input>
+                    <span class="checkmark"></span>
+                    Símbolos
+                </label>
+            </div>
+
+            <div class="strength">
+                <span>Força da senha</span>
+                <div class="strength-indicator">
+                    <div id="strength-bar"></div>
+                </div>
+                <div class="password-security">
+                    <p class="weak">Fraca</p>
+                    <p class="normal">Média</p>
+                    <p class="strong">Forte</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="copyBottom" onclick="copyPassword()">Copiar senha</button>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
